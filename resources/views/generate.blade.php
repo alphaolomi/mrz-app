@@ -21,7 +21,7 @@
     <h1>Generate MRZ</h1>
     <form method="POST" action="{{ route('mrz.generate') }}">
         @csrf
-
+        
         <div class="form-group">
             <label for="type">Type</label>
             <input type="text" name="type" id="type" class="form-control" required>
@@ -72,6 +72,12 @@
 
         <button type="submit" class="btn btn-primary">Generate MRZ</button>
     </form>
+
+    <br>
+    @if (isset($code))
+        <h2>MRZ</h2>
+        <cpde>{{ $code }}</code>
+    @endif
 </div>
 </body>
 
