@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/decode', [App\Http\Controllers\HomeController::class, 'decode'])->name('decode');
 
+
+
+Route::get('/generate', [App\Http\Controllers\MRZController::class, 'index'])->name('mrz.index');
+Route::post('/generate', [App\Http\Controllers\MRZController::class, 'generate'])->name('mrz.generate');
